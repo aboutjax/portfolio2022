@@ -25,9 +25,9 @@ export default function Home({ posts }) {
 
       <Intro />
 
-      {/* <Work posts={workPosts} />
+      <Work posts={workPosts} />
 
-      <WorkInProgress posts={workInProgressPosts} /> */}
+      <WorkInProgress posts={workInProgressPosts} />
 
       <About />
     </>

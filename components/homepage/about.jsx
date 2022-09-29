@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./Section";
+import Section from "./section";
 import SectionHeading from "./sectionHeading";
 
 const education = [

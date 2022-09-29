@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../card";
-import Section from "./Section";
+import Section from "./section";
 import SectionHeading from "./sectionHeading";
 
 function Work({ posts }) {
