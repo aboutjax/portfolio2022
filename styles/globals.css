@@ -65,17 +65,25 @@ body {
 }
 
 .prose-custom {
-  @apply max-w-[100vw] lg:max-w-[70vw] prose prose-headings:text-default-contrastPrimary prose-headings:font-semibold text-default-contrastPrimary prose-strong:text-default-contrastPrimary prose-blockquote:border-default-contrastPrimary/20 prose-blockquote:text-default-contrastPrimary/60 prose-hr:border-default-contrastPrimary/20 prose-figcaption:mt-2 prose-figcaption:text-sm prose-figcaption:text-default-contrastPrimary prose-a:text-default-contrastPrimary prose-li:marker:text-default-contrastPrimary/30 prose-pre:bg-default-contrastPrimary/20 prose-code:text-default-contrastPrimary;
+  @apply max-w-[100vw] lg:max-w-[80vw] prose prose-headings:text-default-contrastPrimary prose-headings:font-semibold text-default-contrastPrimary prose-strong:text-default-contrastPrimary prose-blockquote:border-default-contrastPrimary/20 prose-blockquote:text-default-contrastPrimary/60 prose-hr:border-default-contrastPrimary/20 prose-figcaption:mt-2 prose-figcaption:text-sm prose-figcaption:text-default-contrastPrimary prose-a:text-default-contrastPrimary prose-li:marker:text-default-contrastPrimary/30 prose-pre:bg-default-contrastPrimary/20 prose-code:text-default-contrastPrimary;
 }
 
-.prose-custom :where(:not(.gallery)) {
+.prose :where(:not(.gallery)) {
   @apply max-w-xl;
 }
 
-.prose-custom .gallery * {
+.prose .gallery * {
   @apply max-w-none;
 }
 
-.prose-custom .gallery {
+.prose .gallery {
   @apply mb-12;
+}
+
+.gallery--span-1 {
+  @apply col-span-2 md:col-span-1;
+}
+
+.gallery--span-2 {
+  @apply col-span-2;
 }

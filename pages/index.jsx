@@ -24,11 +24,8 @@ export default function Home({ posts }) {
       </Head>
 
       <Intro />
-
       <Work posts={workPosts} />
-
       <WorkInProgress posts={workInProgressPosts} />
-
       <About />
     </>
   );

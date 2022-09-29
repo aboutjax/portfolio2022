@@ -19,7 +19,7 @@ export default function Post({ frontMatter, mdxSource }) {
 
   return (
     <WorkWrapper>
-      <header className="py-[12vh] border-b-default-contrastSecondary/30 border-b p-5 md:px-12">
+      <header className="py-[5vh] border-b-default-contrastSecondary/30 border-b p-5 md:px-12">
         <p className="text-sm md:text-base text-default-contrastSecondary">
           {frontMatter.jobTitle && `${frontMatter.jobTitle}, `}
           {frontMatter.projectYear}

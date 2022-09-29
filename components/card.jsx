@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -34,14 +35,31 @@ export function CardContained(props) {
   );
 }
 
+function CardGallery(props) {
+  let { images } = props;
+  let list = images.map((image, index) => (
+    <div
+      key={index}
+      className="aspect-[4/3] relative w-full h-full snap-center"
+    >
+      <Image objectFit="cover" layout="fill" alt={""} src={image} />
+    </div>
+  ));
+  return (
+    <div className="flex snap-x snap-mandatory aspect-[4/3] overflow-y-hidden overflow-x-auto">
+      {list}
+    </div>
+  );
+}
+
 function Card(props) {
-  const { post, context, ogImage } = props;
+  const { post, context, ogImage, coverImages } = props;
 
   return (
     <Link href={`posts/${post.slug}`} scroll={true}>
       <motion.div
         whileHover={{ opacity: 0.8 }}
-        className={`aspect-[16/12] md:aspect-[4/3] ${
+        className={`aspect-[4/3] md:aspect-[4/3] ${
           context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
         }  group cursor-pointer  flex flex-col align-start mb-4`}
       >
@@ -50,11 +68,40 @@ function Card(props) {
             backgroundImage: `url(${
               ogImage ? ogImage.url : placeholderImageUrl
             })`,
-            backgroundSize: "120%",
+            backgroundSize: "cover",
             backgroundPosition: "center center",
           }}
-          className="rounded-lg h-full w-full bg-default-contrastPrimary/10 mb-2 transition-all"
+          className="rounded-lg  h-full w-full bg-default-contrastPrimary/10 mb-2 transition-all"
         />
+
+        <h2 className="uppercase text-sm text-default-contrastSecondary">
+          <strong className="font-semibold text-default-contrastPrimary mr-1">
+            {props.title}, {props.projectYear}
+          </strong>
+        </h2>
+        <span className="text-xs md:text-sm text-default-contrastSecondary">
+          {" "}
+          {props.description}
+        </span>
+      </motion.div>
+    </Link>
+  );
+}
+
+export function CardCarousel(props) {
+  const { post, context, ogImage, coverImages } = props;
+
+  return (
+    <Link href={`posts/${post.slug}`} scroll={true}>
+      <motion.div
+        whileHover={{ opacity: 0.8 }}
+        className={`aspect-[4/3] md:aspect-[4/3] ${
+          context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
+        }  group cursor-pointer  flex flex-col align-start mb-4`}
+      >
+        <div className="rounded-lg z-0 overflow-hidden h-full w-full bg-default-contrastPrimary/10 mb-2 transition-all">
+          <CardGallery images={coverImages} />
+        </div>
         <h2 className="uppercase text-sm text-default-contrastSecondary">
           <strong className="font-semibold text-default-contrastPrimary mr-1">
             {props.title}, {props.projectYear}

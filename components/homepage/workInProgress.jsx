@@ -12,6 +12,8 @@ function WorkInProgress({ posts }) {
         title={post.frontMatter.title}
         projectYear={post.frontMatter.projectYear}
         description={post.frontMatter.description}
+        ogImage={post.frontMatter.ogImage}
+        coverImages={post.frontMatter.coverImages}
       />
     );
   });

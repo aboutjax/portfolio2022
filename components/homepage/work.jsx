@@ -1,18 +1,19 @@
 import React from "react";
-import Card from "@/components/card";
+import Card, { CardCarousel } from "@/components/card";
 import Section from "@/components/homepage/section";
-import SectionHeading from "@/components/homepage/sectionHeading";
+import SectionHeading from "./sectionHeading";
 
 function Work({ posts }) {
   let list = posts.map((post) => {
     return (
-      <Card
+      <CardCarousel
         context="work"
         key={post.slug}
         post={post}
         title={post.frontMatter.title}
         projectYear={post.frontMatter.projectYear}
         ogImage={post.frontMatter.ogImage}
+        coverImages={post.frontMatter.coverImages}
       />
     );
   });
