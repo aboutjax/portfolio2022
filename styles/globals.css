@@ -1,26 +1,81 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --token-default-main: 0 0 0;
+    --token-default-contrast-primary: 250 250 250;
+    --token-default-contrast-secondary: 115 115 115;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.theme-night {
+  --token-default-main: 0 0 0;
+  --token-default-contrast-primary: 250 250 250;
+  --token-default-contrast-secondary: 115 115 115;
+}
+
+.theme-light {
+  --token-default-main: 255 255 255;
+  --token-default-contrast-primary: 0 0 0;
+  --token-default-contrast-secondary: 140 140 140;
+}
+
+.theme-amber {
+  --token-default-main: 255 251 235;
+  --token-default-contrast-primary: 124 45 18;
+  --token-default-contrast-secondary: 234 88 12;
+}
+
+.theme-lime {
+  --token-default-main: 247 254 231;
+  --token-default-contrast-primary: 54 83 20;
+  --token-default-contrast-secondary: 101 163 13;
+}
+
+.theme-orange {
+  --token-default-main: 255 247 237;
+  --token-default-contrast-primary: 124 45 18;
+  --token-default-contrast-secondary: 234 88 12;
+}
+
+.theme-yellow {
+  --token-default-main: 254 252 232;
+  --token-default-contrast-primary: 113 63 18;
+  --token-default-contrast-secondary: 221 148 7;
 }
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.prose-custom {
+  @apply max-w-[100vw] lg:max-w-[70vw] prose prose-headings:text-default-contrastPrimary prose-headings:font-semibold text-default-contrastPrimary prose-strong:text-default-contrastPrimary prose-blockquote:border-default-contrastPrimary/20 prose-blockquote:text-default-contrastPrimary/60 prose-hr:border-default-contrastPrimary/20 prose-figcaption:mt-2 prose-figcaption:text-sm prose-figcaption:text-default-contrastPrimary prose-a:text-default-contrastPrimary prose-li:marker:text-default-contrastPrimary/30 prose-pre:bg-default-contrastPrimary/20 prose-code:text-default-contrastPrimary;
+}
+
+.prose-custom :where(:not(.gallery)) {
+  @apply max-w-xl;
+}
+
+.prose-custom .gallery * {
+  @apply max-w-none;
+}
+
+.prose-custom .gallery {
+  @apply mb-12;
 }
