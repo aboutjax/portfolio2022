@@ -1,6 +1,6 @@
 import React from "react";
-import Section from "./section";
-import SectionHeading from "./sectionHeading";
+import Section from "@/components/homepage/section";
+import SectionHeading from "@/components/homepage/sectionHeading";
 
 const education = [
   {

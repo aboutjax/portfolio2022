@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "./footer";
-import Navbar from "./navbar";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 export default function Layout({ children, navLocation }) {
   let themes = ["default", "amber", "lime", "orange", "light"];
@@ -11,7 +11,6 @@ export default function Layout({ children, navLocation }) {
     let themeName = themes[count];
 
     // Function to increment count by 1
-    // Update state with incremented value
     setCount(count + 1);
 
     setTheme(themeName);

@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "../card";
-import Section from "./section";
-import SectionHeading from "./sectionHeading";
+import Card from "@/components/card";
+import Section from "@/components/homepage/section";
+import SectionHeading from "@/components/homepage/sectionHeading";
 
 function WorkInProgress({ posts }) {
   let list = posts.map((post) => {
