@@ -14,32 +14,12 @@ export default function Layout({ children, navLocation }) {
     // Update state with incremented value
     setCount(count + 1);
 
-    console.log(themeName);
     setTheme(themeName);
 
     if (count === themes.length) {
       setCount(0);
     }
-
-    // let newCounter = counter + 1;
-    // counter = newCounter;
-
-    // console.log(counter, newCounter);
-    // setTheme(themes[2]);
-
-    // if (theme === "default") {
-    //   setTheme(themes[0]);
-    // } else {
-    //   setTheme("default");
-    // }
   };
-
-  // React.useEffect(()=>{
-
-  //   if(theme === 'default') {
-
-  //   }
-  // },[theme])
 
   return (
     <div

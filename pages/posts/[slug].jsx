@@ -15,7 +15,6 @@ import Gallery, {
 const components = { Button, Gallery, ImageWithCaption, GalleryComposable };
 
 export default function Post({ frontMatter, mdxSource }) {
-  console.log(frontMatter);
   let creditsList = frontMatter.credits?.map((item, index) => (
     <li className="text-sm mb-1" key={index}>
       {item}
