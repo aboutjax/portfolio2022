@@ -159,7 +159,7 @@ function List({ items, header }) {
     <li key={index} className="text-sm mb-1">
       {item.url ? (
         <a href={item.url} target="blank">
-          <span className="underline underline-offset-2 has-url decoration-default-contrastSecondary/50">
+          <span className="underline underline-offset-2 has-url decoration-default-contrastSecondary">
             {item.label}
           </span>
         </a>
@@ -253,12 +253,53 @@ function About() {
           </a>
           .
         </p>
-
         <List header="Education" items={education} />
         <List header="Experience" items={experience} />
         <List header="Talks / Workshops" items={talks} />
         <List header="Editorial" items={editorial} />
         <List header="Awards / Recognition" items={awards} />
+        {/* About this site */}
+        <p className="text-xs uppercase text-default-contrastSecondary mb-1">
+          Portfolio ingredients
+        </p>
+        <p className="text-sm">
+          Built with{" "}
+          <a
+            className="underline underline-offset-2 decoration-default-contrastSecondary"
+            href="https://nextjs.org/"
+          >
+            Next.js
+          </a>{" "}
+          ,{" "}
+          <a
+            className="underline underline-offset-2 decoration-default-contrastSecondary"
+            href="https://tailwindcss.com/"
+          >
+            Tailwind CSS
+          </a>
+          , and{" "}
+          <a
+            className="underline underline-offset-2 decoration-default-contrastSecondary"
+            href="https://mdxjs.com/"
+          >
+            MDX
+          </a>
+          . Animated by{" "}
+          <a
+            className="underline underline-offset-2 decoration-default-contrastSecondary"
+            href="https://www.framer.com/motion/"
+          >
+            Framer motion
+          </a>
+          . Hosted on{" "}
+          <a
+            className="underline underline-offset-2 decoration-default-contrastSecondary"
+            href="https://github.com/aboutjax/portfolio2022"
+          >
+            Github
+          </a>
+          .
+        </p>
       </Section>
     </div>
   );
