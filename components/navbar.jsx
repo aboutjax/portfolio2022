@@ -17,14 +17,34 @@ function NavLink({ url, label, location, id }) {
   );
 }
 
+const themeToggleVariants = {
+  default: { scale: 1 },
+  hover: { scale: 1 },
+  pressed: { scale: 1 },
+};
+
+const themeToggleDotVariants = {
+  default: { scale: 1 },
+  hover: {
+    scale: 2,
+    transition: { type: "spring", damping: 20, stiffness: 400 },
+  },
+  pressed: { scale: 0.9, transition: { duration: 0.1 } },
+};
+
 const ThemeToggle = ({ setTheme }) => {
   return (
     <motion.button
       onClick={setTheme}
+      variants={themeToggleVariants}
       className="rounded-full px-5 md:px-9 cursor-pointer"
-      whileHover={{ scale: 1.5 }}
+      whileHover={"hover"}
+      whileTap={"pressed"}
     >
-      <div className="h-3 w-3 bg-default-contrastPrimary rounded-full border border-default-contrastPrimary flex items-center justify-center" />
+      <motion.div
+        variants={themeToggleDotVariants}
+        className="h-3 pointer-events-none w-3 bg-default-contrastPrimary rounded-full border border-default-contrastPrimary flex items-center justify-center"
+      />
     </motion.button>
   );
 };

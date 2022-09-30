@@ -39,8 +39,6 @@ export default function Post({ frontMatter, mdxSource }) {
     </li>
   ));
 
-  console.log(frontMatter);
-
   return (
     <WorkWrapper>
       <header className="py-[15vh] border-b-default-contrastSecondary/30 border-b p-5 md:px-12">

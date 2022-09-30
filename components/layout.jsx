@@ -33,12 +33,10 @@ export default function Layout({ children, navLocation }) {
   React.useEffect(() => {
     if (localStorage.getItem("theme-count")) {
       // found theme and use local
-      console.log("found");
       let themeCountFromStorage = parseInt(localStorage.getItem("theme-count"));
 
       setCount(themeCountFromStorage);
     } else {
-      console.log("not found");
       localStorage.setItem("theme-count", 0);
     }
   }, []);
