@@ -17,12 +17,6 @@
   }
 }
 
-.theme-night {
-  --token-default-main: 0 0 0;
-  --token-default-contrast-primary: 250 250 250;
-  --token-default-contrast-secondary: 115 115 115;
-}
-
 .theme-light {
   --token-default-main: 255 255 255;
   --token-default-contrast-primary: 0 0 0;
@@ -41,16 +35,46 @@
   --token-default-contrast-secondary: 101 163 13;
 }
 
+.theme-emerald {
+  --token-default-main: 236 253 245;
+  --token-default-contrast-primary: 6 78 59;
+  --token-default-contrast-secondary: 5 150 105;
+}
+
 .theme-orange {
   --token-default-main: 255 247 237;
   --token-default-contrast-primary: 124 45 18;
   --token-default-contrast-secondary: 234 88 12;
 }
 
+.theme-sky {
+  --token-default-main: 240 249 255;
+  --token-default-contrast-primary: 12 74 110;
+  --token-default-contrast-secondary: 2 132 199;
+}
+
 .theme-yellow {
   --token-default-main: 254 252 232;
   --token-default-contrast-primary: 113 63 18;
   --token-default-contrast-secondary: 221 148 7;
+}
+
+.theme-night {
+  --token-default-main: 0 0 0;
+  --token-default-contrast-primary: 250 250 250;
+  --token-default-contrast-secondary: 115 115 115;
+}
+
+.theme-night-amber {
+  --token-default-main: 0 0 0;
+  --token-default-contrast-primary: 251 191 36;
+  --token-default-contrast-secondary: 146 64 14;
+}
+
+.theme-night-lime {
+  --token-default-main: 54 83 20;
+  --token-default-contrast-primary: 236 252 203;
+  --token-default-contrast-secondary: 132 204 22;
 }
 
 * {

@@ -36,7 +36,7 @@ export function VideoWithCaption({ src, autoplay, controls, span, caption }) {
     <div className={`gallery--span-${span}`}>
       <video
         src={src}
-        playsinline={true}
+        playsInline={true}
         autoPlay={true}
         loop={true}
         type="video/mp4"
