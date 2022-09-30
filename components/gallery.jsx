@@ -6,7 +6,7 @@ export function ImageWithCaption(props) {
 
   return (
     <div className={`gallery--span-${span}`}>
-      <div className="w-full aspect-[4/3] relative">
+      <div className="w-full aspect-[4/3] relative bg-default-contrastSecondary/10 rounded">
         <Image objectFit="cover" layout="fill" alt={caption} src={src} />
       </div>
       <figcaption className="text-default-contrastSecondary leading-tight">
