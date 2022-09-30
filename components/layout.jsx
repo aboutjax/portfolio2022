@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import Head from "next/head";
 
 export default function Layout({ children, navLocation }) {
   // All the available themes
@@ -22,6 +23,9 @@ export default function Layout({ children, navLocation }) {
     <div
       className={`theme-${themes[count]} bg-default text-default-contrastPrimary min-h-screen transition-colors`}
     >
+      <Head>
+        <meta name="theme-color" content={"#FFFFFF"} />
+      </Head>
       <Navbar navLocation={navLocation} setTheme={handleClick} />
       <main>{children}</main>
       <Footer />
