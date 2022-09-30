@@ -5,7 +5,14 @@ import Head from "next/head";
 
 export default function Layout({ children, navLocation }) {
   // All the available themes
-  let themes = ["light", "night", "orange", "lime", "amber"];
+  let themes = ["light", "night", "amber", "lime", "yellow"];
+  let themesMetaColor = [
+    "rgb(255, 255, 255)",
+    "rgb(0, 0, 0)",
+    "rgb(255, 251, 235)",
+    "rgb(247, 254, 231)",
+    "rgb(254 252 232)",
+  ];
 
   const [count, setCount] = React.useState(0);
 
@@ -24,7 +31,7 @@ export default function Layout({ children, navLocation }) {
       className={`theme-${themes[count]} bg-default text-default-contrastPrimary min-h-screen transition-colors`}
     >
       <Head>
-        <meta name="theme-color" content={"#FFFFFF"} />
+        <meta name="theme-color" content={themesMetaColor[count]} />
       </Head>
       <Navbar navLocation={navLocation} setTheme={handleClick} />
       <main>{children}</main>
