@@ -14,7 +14,7 @@ function ContactLink(props) {
 
 function Footer() {
   return (
-    <div className="w-full p-5 md:p-8 border-t-default-contrastSecondary/30 border-t">
+    <div className="w-full p-5 md:px-12 border-t-default-contrastSecondary/30 border-t">
       <nav className="flex gap-2">
         <ContactLink url="/">cheweilee.co</ContactLink>
 

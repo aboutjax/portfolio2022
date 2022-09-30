@@ -1,6 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter.ttf");
+}
 
 @layer base {
   :root {
@@ -65,7 +72,7 @@ body {
 }
 
 .prose-custom {
-  @apply max-w-[100vw] lg:max-w-[80vw] prose prose-headings:text-default-contrastPrimary prose-headings:font-semibold text-default-contrastPrimary prose-strong:text-default-contrastPrimary prose-blockquote:border-default-contrastPrimary/20 prose-blockquote:text-default-contrastPrimary/60 prose-hr:border-default-contrastPrimary/20 prose-figcaption:mt-2 prose-figcaption:text-sm prose-figcaption:text-default-contrastPrimary prose-a:text-default-contrastPrimary prose-li:marker:text-default-contrastPrimary/30 prose-pre:bg-default-contrastPrimary/20 prose-code:text-default-contrastPrimary;
+  @apply max-w-[100vw] 2xl:max-w-[70vw] prose prose-headings:text-default-contrastPrimary prose-headings:font-semibold text-default-contrastPrimary prose-strong:text-default-contrastPrimary prose-blockquote:border-default-contrastPrimary/20 prose-blockquote:text-default-contrastPrimary/60 prose-hr:border-default-contrastPrimary/20 prose-figcaption:text-sm prose-figcaption:mt-2 prose-figcaption:text-default-contrastPrimary prose-a:text-default-contrastPrimary prose-li:marker:text-default-contrastPrimary/30 prose-pre:bg-default-contrastPrimary/20 prose-code:text-default-contrastPrimary prose-img:rounded prose-headings:tracking-tight prose-video:m-0 prose-p:underline-offset-2;
 }
 
 .prose :where(:not(.gallery)) {
@@ -86,4 +93,18 @@ body {
 
 .gallery--span-2 {
   @apply col-span-2;
+}
+
+.has-url {
+  position: relative;
+}
+
+.has-url::after {
+  content: "↗";
+  text-decoration: none;
+  position: relative;
+  top: 2px;
+  right: -2px;
+  @apply text-default-contrastSecondary;
+  display: none;
 }

@@ -24,7 +24,7 @@ const ThemeToggle = ({ setTheme }) => {
       className="rounded-full px-4 md:px-9 cursor-pointer"
       whileHover={{ scale: 1.5 }}
     >
-      <div className="h-4 w-4 block rounded-full bg-default-contrastPrimary" />
+      <div className="h-3 w-3 bg-default-contrastPrimary rounded-full border border-default-contrastPrimary flex items-center justify-center" />
     </motion.button>
   );
 };

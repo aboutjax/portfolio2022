@@ -1,12 +1,12 @@
 import React from "react";
-import Card from "@/components/card";
+import Card, { CardCarousel } from "@/components/card";
 import Section from "@/components/homepage/section";
 import SectionHeading from "@/components/homepage/sectionHeading";
 
 function WorkInProgress({ posts }) {
   let list = posts.map((post) => {
     return (
-      <Card
+      <CardCarousel
         key={post.slug}
         post={post}
         title={post.frontMatter.title}
@@ -26,7 +26,13 @@ function WorkInProgress({ posts }) {
         />
 
         <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {list}
+          {list.length < 1 ? (
+            <h2 className="p-5 rounded bg-default-contrastSecondary/20 ">
+              Coming soon
+            </h2>
+          ) : (
+            list
+          )}
         </div>
       </Section>
     </div>

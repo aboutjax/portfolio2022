@@ -158,8 +158,10 @@ function List({ items, header }) {
   const list = items.map((item, index) => (
     <li key={index} className="text-sm mb-1">
       {item.url ? (
-        <a href={item.url}>
-          <span className="underline underline-offset-2">{item.label}</span>
+        <a href={item.url} target="blank">
+          <span className="underline underline-offset-2 has-url decoration-default-contrastSecondary/50">
+            {item.label}
+          </span>
         </a>
       ) : (
         <span className="">{item.label}</span>
@@ -189,25 +191,67 @@ function About() {
         <p className="text-base max-w-lg mb-8">
           Hey, I&apos;m Che Wei (Sounds like: Zhé wěi), you can also call me
           Jacky. I&apos;m a designer, developer, and cycling fanatic. I&apos;m
-          currently helping Wahoo Fitness build world-class training experiences
-          for endurance athletes.
+          currently based in New York City, remotely helping{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://wahoofitness.com"
+          >
+            Wahoo Fitness
+          </a>{" "}
+          build world-class training experiences for endurance athletes.
         </p>
         <p className="text-base max-w-lg mb-8">
-          Before Wahoo, I designed geospatial data management platform for
-          Koordinates, lead the design system and process for their web
-          application, contributing to the securement of multiple government
-          contracts, like Land Information New Zealand and Stats NZ, for using
-          Koordinates as their official data portals.
+          Before Wahoo, I designed geospatial data management platform for{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://koordinates.com"
+          >
+            Koordinates
+          </a>
+          , lead the design system and process for their web application,
+          contributing to the securement of multiple government contracts, like
+          Land Information New Zealand and Stats NZ, for using Koordinates as
+          their official data portals.
         </p>
         <p className="text-base max-w-lg mb-8">
-          Before Koordinates, I designed for retail point-of-sale experiences at
-          Vend by Lightspeed. I assisted in various prototyping and user testing
-          tasks, and worked closely with developers to ensure high quality
-          releases.
+          Before Koordinates, I designed for retail point-of-sale experiences at{" "}
+          <a className="underline underline-offset-2" href="https://vendhq.com">
+            Vend by Lightspeed
+          </a>
+          . I assisted in various prototyping and user testing tasks, and worked
+          closely with developers to ensure high quality releases.
         </p>
         <p className="text-base max-w-lg mb-8">
-          When not designing, you can find me cycling about, taking photos,
-          practicing hand lettering, or playing games.
+          When I&apos;m not staring at a screen, you can find me cycling about
+          on{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://www.strava.com/athletes/1105155"
+          >
+            Strava
+          </a>
+          , taking photos on{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://www.instagram.com/p0pmaker/"
+          >
+            Instagram
+          </a>
+          , practicing{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://www.instagram.com/p0pletter/"
+          >
+            hand lettering
+          </a>
+          , or playing games on{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://account.xbox.com/en-us/Profile?xr=mebarnav&rtc=1"
+          >
+            Xbox
+          </a>
+          .
         </p>
 
         <List header="Education" items={education} />

@@ -6,7 +6,7 @@ export default function Section(props) {
   return (
     <section
       id={id}
-      className={`p-5 scroll-m-0 md:scroll-m-8 ${className ? className : ""}`}
+      className={`p-5 scroll-m-0 sm:scroll-m-8 ${className ? className : ""}`}
     >
       {children}
     </section>

@@ -4,22 +4,46 @@ import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import React from "react";
 import Button from "@/components/button";
-import { GalleryComposable, ImageWithCaption } from "@/components/gallery";
+import {
+  GalleryComposable,
+  ImageWithCaption,
+  ImageWithCaptionComposable,
+  VideoWithCaption,
+  EmbedWithCaption,
+} from "@/components/gallery";
 import PostBody from "@/components/post-body";
 import WorkWrapper from "@/components/workWrapper";
 
-const components = { Button, ImageWithCaption, GalleryComposable };
+const components = {
+  Button,
+  ImageWithCaption,
+  GalleryComposable,
+  ImageWithCaptionComposable,
+  VideoWithCaption,
+  EmbedWithCaption,
+};
 
 export default function Post({ frontMatter, mdxSource }) {
   let creditsList = frontMatter.credits?.map((item, index) => (
     <li className="text-sm mb-1" key={index}>
-      {item}
+      {item.url ? (
+        <a
+          className="underline underline-offset-2 decoration-default-contrastSecondary/50 has-url"
+          href={item.url}
+        >
+          {item.name}
+        </a>
+      ) : (
+        item.name
+      )}
     </li>
   ));
 
+  console.log(frontMatter);
+
   return (
     <WorkWrapper>
-      <header className="py-[5vh] border-b-default-contrastSecondary/30 border-b p-5 md:px-12">
+      <header className="py-[15vh] border-b-default-contrastSecondary/30 border-b p-5 md:px-12">
         <p className="text-sm md:text-base text-default-contrastSecondary">
           {frontMatter.jobTitle && `${frontMatter.jobTitle}, `}
           {frontMatter.projectYear}
@@ -31,12 +55,13 @@ export default function Post({ frontMatter, mdxSource }) {
           {frontMatter.excerpt}
         </p>
       </header>
+
       <div className="p-5 md:p-12">
         <PostBody mdxSource={mdxSource} components={components} />
         {frontMatter.credits && (
           <>
             <hr className="border-default-contrastSecondary/30" />
-            <h1 className="mt-5 mb-2 text-default-contrastSecondary text-xs uppercase">
+            <h1 className="mt-5 mb-1 text-default-contrastSecondary text-xs uppercase">
               Credits
             </h1>
             <ul>{creditsList}</ul>

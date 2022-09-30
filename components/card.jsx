@@ -97,18 +97,17 @@ export function CardCarousel(props) {
         whileHover={{ opacity: 0.8 }}
         className={`aspect-[4/3] md:aspect-[4/3] ${
           context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
-        }  group cursor-pointer  flex flex-col align-start mb-4`}
+        }  group cursor-pointer  flex flex-col align-start mb-4 `}
       >
-        <div className="rounded-lg z-0 overflow-hidden h-full w-full bg-default-contrastPrimary/10 mb-2 transition-all">
+        <div className="border border-default-contrastSecondary/20 rounded-lg z-0 overflow-hidden h-full w-full bg-default-contrastPrimary/10 mb-2 transition-all">
           <CardGallery images={coverImages} />
         </div>
-        <h2 className="uppercase text-sm text-default-contrastSecondary">
+        <h2 className="uppercase text-sm text-default-contrastSecondary mt-1">
           <strong className="font-semibold text-default-contrastPrimary mr-1">
             {props.title}, {props.projectYear}
           </strong>
         </h2>
         <span className="text-xs md:text-sm text-default-contrastSecondary">
-          {" "}
           {props.description}
         </span>
       </motion.div>

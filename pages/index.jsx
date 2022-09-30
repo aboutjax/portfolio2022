@@ -49,7 +49,13 @@ export const getStaticProps = async () => {
     })
     .sort((post1, post2) =>
       post1.frontMatter.date > post2.frontMatter.date ? -1 : 1
-    );
+    )
+    .filter((post) => {
+      if (post.frontMatter.publish) {
+        return post;
+      } else {
+      }
+    });
 
   return {
     props: {

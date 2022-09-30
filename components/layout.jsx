@@ -3,28 +3,26 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 
 export default function Layout({ children, navLocation }) {
-  let themes = ["default", "amber", "lime", "orange", "light"];
-  const [theme, setTheme] = React.useState("default");
+  // All the available themes
+  let themes = ["light", "night", "orange", "lime", "amber"];
+
   const [count, setCount] = React.useState(0);
 
-  let toggleTheme = () => {
-    let themeName = themes[count];
-
+  const handleClick = () => {
     // Function to increment count by 1
     setCount(count + 1);
 
-    setTheme(themeName);
-
-    if (count === themes.length) {
+    // If it reaches the end of the themes cycle. Revert back to first theme.
+    if (count === themes.length - 1) {
       setCount(0);
     }
   };
 
   return (
     <div
-      className={`theme-${theme} bg-default text-default-contrastPrimary min-h-screen transition-colors`}
+      className={`theme-${themes[count]} bg-default text-default-contrastPrimary min-h-screen transition-colors`}
     >
-      <Navbar navLocation={navLocation} setTheme={toggleTheme} />
+      <Navbar navLocation={navLocation} setTheme={handleClick} />
       <main>{children}</main>
       <Footer />
     </div>
