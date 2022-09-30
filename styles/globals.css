@@ -72,9 +72,9 @@
 }
 
 .theme-night-lime {
-  --token-default-main: 54 83 20;
+  --token-default-main: 5 5 5;
   --token-default-contrast-primary: 236 252 203;
-  --token-default-contrast-secondary: 132 204 22;
+  --token-default-contrast-secondary: 77 124 15;
 }
 
 * {
