@@ -16,6 +16,7 @@ function Work({ posts }) {
         ogImage={post.frontMatter.ogImage}
         coverImages={post.frontMatter.coverImages}
         description={post.frontMatter.description}
+        priority={true}
       />
     );
   });

@@ -36,13 +36,19 @@ export function CardContained(props) {
 }
 
 function CardGallery(props) {
-  let { images } = props;
+  let { images, priority } = props;
   let list = images.map((image, index) => (
     <div
       key={index}
       className="aspect-[4/3] relative w-full h-full snap-center"
     >
-      <Image objectFit="cover" layout="fill" alt={""} src={image} />
+      <Image
+        objectFit="cover"
+        layout="fill"
+        alt={""}
+        src={image}
+        priority={priority ? true : false}
+      />
     </div>
   ));
   return (
@@ -89,7 +95,7 @@ function Card(props) {
 }
 
 export function CardCarousel(props) {
-  const { post, context, ogImage, coverImages } = props;
+  const { post, context, coverImages, priority } = props;
 
   return (
     <Link href={`posts/${post.slug}`} scroll={true}>
@@ -100,7 +106,7 @@ export function CardCarousel(props) {
         }  group cursor-pointer  flex flex-col align-start mb-4 `}
       >
         <div className="border border-default-contrastSecondary/20 rounded-lg z-0 overflow-hidden h-full w-full bg-default-contrastPrimary/10 mb-2 transition-all">
-          <CardGallery images={coverImages} />
+          <CardGallery images={coverImages} priority={priority} />
         </div>
         <h2 className="uppercase text-sm text-default-contrastSecondary mt-1">
           <strong className="font-semibold text-default-contrastPrimary mr-1">
