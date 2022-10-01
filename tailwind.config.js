@@ -26,7 +26,7 @@ module.exports = {
         tight: "-0.03em",
       },
       fontWeight: {
-        xl: "800",
+        xl: "600",
       },
       maxWidth: {
         "8xl": "120ch",
