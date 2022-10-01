@@ -58,7 +58,9 @@ export default function Layout({ children, navLocation }) {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       className={`theme-${themes[count]} bg-default text-default-contrastPrimary min-h-screen transition-colors`}
     >
       <Head>
@@ -68,7 +70,7 @@ export default function Layout({ children, navLocation }) {
 
       <main className="relative z-20">{children}</main>
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 
