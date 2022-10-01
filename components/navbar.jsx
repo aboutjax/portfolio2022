@@ -43,7 +43,7 @@ const ThemeToggle = ({ setTheme }) => {
     >
       <motion.div
         variants={themeToggleDotVariants}
-        className="h-3 pointer-events-none w-3 bg-default-contrastPrimary rounded-full border border-default-contrastPrimary flex items-center justify-center"
+        className="h-3 curosr-pointer w-3 bg-default-contrastPrimary rounded-full border border-default-contrastPrimary flex items-center justify-center"
       />
     </motion.button>
   );
@@ -68,7 +68,7 @@ export default function Navbar({ navLocation, setTheme }) {
   }, [router]);
 
   return (
-    <div className="z-50 relative transition-colors top-0 sm:sticky w-full flex justify-between border-b border-b-default-contrastSecondary/30 bg-default/80 backdrop-blur-md">
+    <div className="z-50 relative transition-colors top-0 sm:sticky w-full flex justify-between border-b border-b-default-contrastSecondary/10 bg-default/80 backdrop-blur-md">
       <nav
         className={`flex flex-nowrap w-full px-2 md:px-9 text-base font-regular text-default-contrastSecondary `}
       >
