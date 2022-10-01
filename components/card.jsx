@@ -46,11 +46,7 @@ function CardGallery(props) {
     </div>
   ));
   return (
-    <motion.div
-      whileInView={{ opacity: 1, scale: 1, y: 0 }}
-      initial={{ opacity: 0, scale: 0.95, y: 12 }}
-      className="flex snap-x snap-mandatory aspect-[4/3] overflow-y-hidden overflow-x-auto"
-    >
+    <motion.div className="flex snap-x snap-mandatory aspect-[4/3] overflow-y-hidden overflow-x-auto">
       {list}
     </motion.div>
   );
@@ -62,8 +58,6 @@ function Card(props) {
   return (
     <Link href={`posts/${post.slug}`} scroll={true}>
       <motion.div
-        whileInView={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
         whileHover={{ opacity: 0.8 }}
         className={`aspect-[4/3] md:aspect-[4/3] ${
           context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""

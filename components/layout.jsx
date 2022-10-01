@@ -64,7 +64,6 @@ export default function Layout({ children, navLocation }) {
       <Head>
         <meta name="theme-color" content={themesMetaColor[count]} />
       </Head>
-      {/* <Blob /> */}
       <Navbar navLocation={navLocation} setTheme={handleClick} />
 
       <main className="relative z-20">{children}</main>
