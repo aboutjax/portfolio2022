@@ -49,7 +49,6 @@ function CardGallery(props) {
     <motion.div
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
       initial={{ opacity: 0, scale: 0.95, y: 12 }}
-      transition={{ delay: 0.1 }}
       className="flex snap-x snap-mandatory aspect-[4/3] overflow-y-hidden overflow-x-auto"
     >
       {list}
