@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function Layout({ children, navLocation }) {
   // All the available themes
@@ -63,9 +64,20 @@ export default function Layout({ children, navLocation }) {
       <Head>
         <meta name="theme-color" content={themesMetaColor[count]} />
       </Head>
+      {/* <Blob /> */}
       <Navbar navLocation={navLocation} setTheme={handleClick} />
-      <main>{children}</main>
+
+      <main className="relative z-20">{children}</main>
       <Footer />
     </div>
   );
 }
+
+const Blob = () => {
+  return (
+    <motion.div className="fixed z-10 top-0 bottom-0 left-0 right-0 flex items-center justify-center">
+      <div className="absolute top-0 right-0 w-full h-full z-10 backdrop-blur-3xl" />
+      <motion.div className="h-[80vh] w-[80vh] rounded-full bg-default-contrastSecondary/10 z-0" />
+    </motion.div>
+  );
+};

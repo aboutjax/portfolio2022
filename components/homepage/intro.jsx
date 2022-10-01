@@ -15,7 +15,16 @@ function Intro() {
         id="intro"
         className="md:px-12 pt-[15vh] py-[10vh] md:py-[20vh] md:pt-[28vh]"
       >
-        <h1 className="text-lg md:text-xl text-default-contrastSecondary leading-heading font-xl tracking-tight max-w-6xl">
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.98, y: 4 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: { delay: 0.1, duration: 1 },
+          }}
+          className="text-lg md:text-xl text-default-contrastSecondary leading-heading font-xl tracking-tight max-w-6xl"
+        >
           <motion.span
             className={
               language === "english"
@@ -72,7 +81,7 @@ function Intro() {
               我是李哲瑋，一位產品設計/工程師。高雄，台灣製造。在奧克蘭，紐西蘭長大。目前居住於紐約，美國。
             </span>
           )}
-        </h1>
+        </motion.h1>
       </Section>
     </div>
   );
