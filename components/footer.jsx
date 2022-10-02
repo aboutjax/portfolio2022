@@ -2,13 +2,15 @@ import Link from "next/link";
 import React from "react";
 
 function ContactLink(props) {
-  const { children, url } = props;
+  const { children, url, external } = props;
   return (
-    <Link href={url}>
-      <span className="text-sm decoration-default-contrastSecondary/50 cursor-pointer">
-        {children}
-      </span>
-    </Link>
+    <a
+      href={url}
+      target="blank"
+      className="text-sm decoration-default-contrastSecondary/50 cursor-pointer"
+    >
+      {children}
+    </a>
   );
 }
 
@@ -16,19 +18,32 @@ function Footer() {
   return (
     <div className="w-full p-5 md:px-12 border-t-default-contrastSecondary/30 border-t">
       <nav className="flex gap-2">
-        <ContactLink url="/">cheweilee.co</ContactLink>
+        <Link
+          className="text-sm decoration-default-contrastSecondary/50 cursor-pointer"
+          href={"/"}
+        >
+          <span className="text-sm decoration-default-contrastSecondary/50 cursor-pointer">
+            cheweilee.co
+          </span>
+        </Link>
 
         <span className="text-sm text-default-contrastSecondary/40">/</span>
 
-        <ContactLink url="/">Email</ContactLink>
+        <ContactLink external={true} url="mailto:chewei.jacky.lee@gmail.com">
+          Email
+        </ContactLink>
 
         <span className="text-sm text-default-contrastSecondary/40">/</span>
 
-        <ContactLink url="/">Twitter</ContactLink>
+        <ContactLink external={true} url="https://twitter.com/p0pmaker">
+          Twitter
+        </ContactLink>
 
         <span className="text-sm text-default-contrastSecondary/40">/</span>
 
-        <ContactLink url="/">Instagram</ContactLink>
+        <ContactLink external={true} url="https://www.instagram.com/p0pmaker/">
+          Instagram
+        </ContactLink>
       </nav>
     </div>
   );

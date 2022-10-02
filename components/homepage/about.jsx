@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "@/components/homepage/section";
 import SectionHeading from "@/components/homepage/sectionHeading";
+import ExternalLink from "../externalLink";
 
 const education = [
   {
@@ -264,40 +265,19 @@ function About() {
         </p>
         <p className="text-sm">
           Built with{" "}
-          <a
-            className="underline underline-offset-2 decoration-default-contrastSecondary"
-            href="https://nextjs.org/"
-          >
-            Next.js
-          </a>{" "}
-          ,{" "}
-          <a
-            className="underline underline-offset-2 decoration-default-contrastSecondary"
-            href="https://tailwindcss.com/"
-          >
+          <ExternalLink href="https://nextjs.org/">Next.js</ExternalLink>,{" "}
+          <ExternalLink href="https://tailwindcss.com/">
             Tailwind CSS
-          </a>
-          , and{" "}
-          <a
-            className="underline underline-offset-2 decoration-default-contrastSecondary"
-            href="https://mdxjs.com/"
-          >
-            MDX
-          </a>
-          . Animated by{" "}
-          <a
-            className="underline underline-offset-2 decoration-default-contrastSecondary"
-            href="https://www.framer.com/motion/"
-          >
+          </ExternalLink>
+          , and <ExternalLink href="https://mdxjs.com/">MDX</ExternalLink>.
+          Animated by{" "}
+          <ExternalLink href="https://www.framer.com/motion/">
             Framer motion
-          </a>
+          </ExternalLink>
           . Hosted on{" "}
-          <a
-            className="underline underline-offset-2 decoration-default-contrastSecondary"
-            href="https://github.com/aboutjax/portfolio2022"
-          >
+          <ExternalLink href="https://github.com/aboutjax/portfolio2022">
             Github
-          </a>
+          </ExternalLink>
           .
         </p>
       </Section>
