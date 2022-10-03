@@ -19,7 +19,12 @@ export default function Home({ posts }) {
     <>
       <Head>
         <title>Che Wei Lee</title>
-        <meta name="description" content="Che Wei Lee" key="description" />
+        <meta
+          name="description"
+          content="Hello. 哩賀. 你好. I'm Che Wei Lee, a Product Designer and Developer made in Kaohsiung, Taiwan, raised in Auckland, New Zealand, now based in New York, USA."
+          key="description"
+        />
+        <meta property="og:image" content="/ogImage.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
