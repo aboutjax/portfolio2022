@@ -5,8 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 function Intro() {
   const [language, setLanguage] = React.useState("english");
   let { scrollYProgress, scrollY } = useScroll();
-  let y = useTransform(scrollY, [0, 300], ["0px", "40px"]);
-  let opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  let y = useTransform(scrollYProgress, [0, 0.2], [0, 200]);
+  let opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   React.useEffect(() => {
     return scrollY.onChange((latest) => {
