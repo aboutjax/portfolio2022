@@ -48,7 +48,7 @@ export default function Post({ frontMatter, mdxSource }) {
         <title>{`${frontMatter.title} | Che Wei Lee`}</title>
         <meta
           name="description"
-          content={`Che Wei Lee - ${frontMatter.title}`}
+          content={`Che Wei Lee - ${frontMatter.description}`}
           key="title"
         />
         <meta
