@@ -1,9 +1,20 @@
 import React from "react";
 import Section from "@/components/homepage/section";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 function Intro() {
   const [language, setLanguage] = React.useState("english");
+  let { scrollYProgress, scrollY } = useScroll();
+  let y = useTransform(scrollY, [0, 300], ["0px", "40px"]);
+  let opacity = useTransform(scrollY, [0, 300], [1, 0]);
+
+  React.useEffect(() => {
+    return scrollY.onChange((latest) => {
+      console.log("Page scroll: ", latest);
+    });
+  }, []);
+
+  // console.log(scrollYProgress);
 
   let handleClick = (language) => {
     setLanguage(language);
@@ -16,14 +27,8 @@ function Intro() {
         className="md:px-12 pt-[15vh] py-[10vh] md:py-[20vh] md:pt-[28vh]"
       >
         <motion.h1
-          initial={{ opacity: 0, scale: 0.98, y: 4 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            transition: { delay: 0.1, duration: 1 },
-          }}
-          className="text-lg md:text-xl text-default-contrastSecondary leading-heading font-xl tracking-tight max-w-6xl"
+          style={{ y, opacity }}
+          className="relative text-lg md:text-xl text-default-contrastSecondary leading-heading font-xl tracking-tight max-w-6xl"
         >
           <motion.span
             className={

@@ -52,6 +52,26 @@ export function VideoWithCaption({ src, autoplay, controls, span, caption }) {
   );
 }
 
+export function VideoWithCaptionComposable({ src, span, children }) {
+  return (
+    <motion.div className={`gallery--span-${span}`}>
+      <video
+        src={src}
+        playsInline={true}
+        autoPlay={true}
+        loop={true}
+        type="video/mp4"
+        controls={true}
+        muted={true}
+        className="w-full"
+      />
+      <figcaption className="text-default-contrastSecondary leading-tight">
+        {children}
+      </figcaption>
+    </motion.div>
+  );
+}
+
 export function EmbedWithCaption({ src, span, caption }) {
   return (
     <motion.div className={`gallery--span-${span}`}>
@@ -63,7 +83,7 @@ export function EmbedWithCaption({ src, span, caption }) {
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
       <figcaption className="text-default-contrastSecondary leading-tight">
         {caption}

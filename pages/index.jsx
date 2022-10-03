@@ -19,7 +19,7 @@ export default function Home({ posts }) {
     <>
       <Head>
         <title>Che Wei Lee</title>
-        <meta name="description" content="Che Wei Lee" />
+        <meta name="description" content="Che Wei Lee" key="description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

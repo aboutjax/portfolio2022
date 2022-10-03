@@ -1,0 +1,33 @@
+---
+publish: true
+category: "work in progress"
+title: "Goneriding.co"
+projectYear: "2019"
+coverImages:
+  ["/assets/goneriding/detail.jpg", "/assets/goneriding/homepage.jpg"]
+description: "Cycling journal with Strava + Mapbox API"
+ogImage:
+  url: "/assets/goneriding/homepage.jpg"
+excerpt: "Cycling journal with Strava + Mapbox API"
+date: "2019-03-16T05:35:07.322Z"
+---
+
+<GalleryComposable>
+  <VideoWithCaptionComposable src="/assets/goneriding/video.mp4" span={2}>
+    <span>
+      <a href="https://goneriding.co">Goneriding</a> – a cycling journal.
+    </span>
+  </VideoWithCaptionComposable>
+  <ImageWithCaption
+    src="/assets/goneriding/homepage.jpg"
+    caption="Homepage. Entries filterable by country."
+    span={1}
+  ></ImageWithCaption>
+  <ImageWithCaption
+    src="/assets/goneriding/detail.jpg"
+    caption="Detail view of each entry. Mapbox's API provided the sleek 3D map renderer, with route data from my Strava datastream."
+    span={1}
+  />
+</GalleryComposable>
+
+[Gonerding.co](https://goneriding.co) is a cycling journal built with Next.js, MDX, Strava API, Mapbox GL JS. [Github Repo](https://github.com/aboutjax/goneriding-next). This project was inspired by my year-long bike travel in 2019. I was looking for a blogging platform that focused on storytelling through a GPX or .fit file. I couldn't find one that matched what I had in mind so I built one. Goneriding served as a personal journal to document all the notable rides I've done that year.

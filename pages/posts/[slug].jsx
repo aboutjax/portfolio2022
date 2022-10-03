@@ -4,11 +4,13 @@ import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import React from "react";
 import Button from "@/components/button";
+import Head from "next/head";
 import {
   GalleryComposable,
   ImageWithCaption,
   ImageWithCaptionComposable,
   VideoWithCaption,
+  VideoWithCaptionComposable,
   EmbedWithCaption,
 } from "@/components/gallery";
 import PostBody from "@/components/post-body";
@@ -21,6 +23,7 @@ const components = {
   ImageWithCaptionComposable,
   VideoWithCaption,
   EmbedWithCaption,
+  VideoWithCaptionComposable,
 };
 
 export default function Post({ frontMatter, mdxSource }) {
@@ -41,6 +44,19 @@ export default function Post({ frontMatter, mdxSource }) {
 
   return (
     <WorkWrapper>
+      <Head>
+        <title>{`${frontMatter.title} | Che Wei Lee`}</title>
+        <meta
+          name="description"
+          content={`Che Wei Lee - ${frontMatter.title}`}
+          key="title"
+        />
+        <meta
+          property="og:title"
+          content={`Che Wei Lee - ${frontMatter.title}`}
+        />
+        <meta property="og:image" content={frontMatter.ogImage.url} />
+      </Head>
       <header className="py-[15vh] border-b-default-contrastSecondary/30 border-b p-5 md:px-12">
         <p className="text-sm md:text-base text-default-contrastSecondary">
           {frontMatter.jobTitle && `${frontMatter.jobTitle}, `}
