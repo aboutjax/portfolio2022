@@ -50,11 +50,11 @@ credits:
     caption="Product discovery, pairing and onboarding."
     span={1}
   />
-  <ImageWithCaption
-    src={"/assets/wahoo_fitness/loupe.jpeg"}
-    caption="Demo-ing work in front of prototyping nerds in Framer Loupe, Amsterdam, 2019"
-    span={1}
-  />
+  <ImageWithCaptionComposable src={"/assets/wahoo_fitness/loupe.jpeg"} span={1}>
+    Demo-ing a{" "}
+    <a href={`https://medium.com/wahoo-product-design/blurring-the-lines-between-prototype-and-real-product-4687b624442d`}
+    >bluetooth enabled prototype</a> in front of prototyping nerds in Framer Loupe, Amsterdam, 2019.
+  </ImageWithCaptionComposable>
   <ImageWithCaption
     src={"/assets/wahoo_fitness/devices.jpg"}
     caption="Product devices onboarding and setup flow."
