@@ -45,10 +45,10 @@ export default function Post({ frontMatter, mdxSource }) {
   return (
     <WorkWrapper>
       <Head>
-        <title>{`${frontMatter.title} | Che Wei Lee`}</title>
+        <title>{`${frontMatter.title} - Che Wei Lee`}</title>
         <meta
           name="description"
-          content={`Che Wei Lee - ${frontMatter.description}`}
+          content={`${frontMatter.description}`}
           key="title"
         />
         <meta
