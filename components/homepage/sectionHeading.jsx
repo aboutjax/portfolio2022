@@ -8,7 +8,7 @@ function SectionHeading(props) {
         {title}
       </h1>
       {description && (
-        <p className="text-default-contrastSecondary text-base md:text-base">
+        <p className="text-default-contrastSecondary tracking-normal text-base md:text-base">
           {description}
         </p>
       )}
