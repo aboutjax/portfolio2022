@@ -7,7 +7,11 @@
   font-style: "normal";
   src: url("/fonts/Inter.ttf") format("truetype");
   font-weight: 1 999;
-  font-display: optional;
+  font-display: block;
+}
+
+* {
+  font-feature-settings: "salt";
 }
 
 @layer base {
