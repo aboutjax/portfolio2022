@@ -69,9 +69,9 @@ function Intro() {
           {language === "english" && (
             <span>
               {" "}
-              I&apos;m Che Wei Lee, 3/16 a Product Designer and Developer made
-              in Kaohsiung, Taiwan, raised in Auckland, New Zealand, now based
-              in New York, USA.
+              I&apos;m Che Wei Lee, a Product Designer and Developer made in
+              Kaohsiung, Taiwan, raised in Auckland, New Zealand, now based in
+              New York, USA.
             </span>
           )}
           {language === "taiwanese" && (
