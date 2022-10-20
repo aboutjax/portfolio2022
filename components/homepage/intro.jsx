@@ -33,8 +33,8 @@ function Intro() {
           <motion.span
             className={
               language === "english"
-                ? "text-default-contrastPrimary inline-block"
-                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors"
+                ? "inline-block bg-gradient-to-tr text-transparent from-default-contrastPrimary to-default-contrastSecondary bg-clip-text"
+                : "relative cursor-pointer hover:inline-block transition-colors inline-block bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
             }
             onClick={() => {
               handleClick("english");
@@ -45,8 +45,8 @@ function Intro() {
           <motion.span
             className={
               language === "taiwanese"
-                ? "text-default-contrastPrimary inline-block"
-                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors"
+                ? "inline-block bg-gradient-to-tr text-transparent from-default-contrastPrimary to-default-contrastSecondary bg-clip-text"
+                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors inline-block bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
             }
             onClick={() => {
               handleClick("taiwanese");
@@ -57,8 +57,8 @@ function Intro() {
           <motion.span
             className={
               language === "mandarin"
-                ? "text-default-contrastPrimary inline-block"
-                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors"
+                ? "inline-block bg-gradient-to-tr text-transparent from-default-contrastPrimary to-default-contrastSecondary bg-clip-text"
+                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors inline-block bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
             }
             onClick={() => {
               handleClick("mandarin");

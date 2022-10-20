@@ -5,7 +5,7 @@ title: "Chapter2 Huru with Blender"
 projectYear: "2022"
 description: "Modelling the Chapter2 Huru"
 coverImages:
-  ["/assets/3d_modelling/hero.jpg", "/assets/3d_modelling/hero_wireframe.jpg"]
+  ["/assets/3d_modelling/10.jpg", "/assets/3d_modelling/SIDE_4K.jpg", "/assets/3d_modelling/hero_wireframe.jpg"]
 excerpt: Modelling the Chapter2 Huru on Blender.
 date: "2022-03-16T05:35:07.322Z"
 ogImage:
@@ -15,20 +15,28 @@ ogImage:
 <GalleryComposable>
   <ImageWithCaption
     src="/assets/3d_modelling/FRONT_4K.jpg"
-    caption=""
+    caption="Front View"
     span={2}
   />
-  <ImageWithCaption src="/assets/3d_modelling/hero.jpg" caption="" span={1} />
+  <ImageWithCaptionComposable src={"/assets/3d_modelling/SIDE_4K.jpg"} span={2}>
+    <span>
+      Drive Side. No need for
+      <a
+        href={`https://medium.com/wahoo-product-design/blurring-the-lines-between-prototype-and-real-product-4687b624442d`}
+      >Shadowstands</a>!
+    </span>
+  </ImageWithCaptionComposable>
+  <ImageWithCaption src="/assets/3d_modelling/45_4K.jpg" caption="" span={2} />
   <ImageWithCaption
     src="/assets/3d_modelling/hero_wireframe.jpg"
-    caption=""
-    span={1}
+    caption="Wireframe view"
+    span={2}
   />
-  <ImageWithCaption src="/assets/3d_modelling/2K.jpg" caption="" span={1} />
-  <ImageWithCaption
-    src="/assets/3d_modelling/crankset.gif"
-    caption=""
-    span={1}
+  <ImageWithCaption src="/assets/3d_modelling/10.jpg" caption="Cockpit. The handlebar tapes took a while to get right." span={2} />
+  <VideoWithCaption
+    src="/assets/3d_modelling/crankset.mov"
+    span={2}
+    caption="Ultegra 8000 Crankset (Drive side)"
   />
 </GalleryComposable>
 

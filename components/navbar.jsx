@@ -26,7 +26,7 @@ const themeToggleVariants = {
 const themeToggleDotVariants = {
   default: { scale: 1 },
   hover: {
-    scale: 2,
+    scale: 1.4,
     transition: { type: "spring", damping: 20, stiffness: 400 },
   },
   pressed: { scale: 0.9, transition: { duration: 0.1 } },
@@ -43,7 +43,7 @@ const ThemeToggle = ({ setTheme }) => {
     >
       <motion.div
         variants={themeToggleDotVariants}
-        className="h-3 curosr-pointer w-3 bg-default-contrastPrimary rounded-full border border-default-contrastPrimary flex items-center justify-center"
+        className="h-3 curosr-pointer w-3 bg-default-contrastPrimary rounded-full border border-default-contrastPrimary flex items-center justify-center bg-gradient-to-bl from-default-contrastSecondary to-default-contrastSecondary/10"
       />
     </motion.button>
   );
