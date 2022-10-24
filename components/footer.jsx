@@ -7,7 +7,7 @@ function ContactLink(props) {
     <a
       href={url}
       target="blank"
-      className="text-sm decoration-default-contrastSecondary/50 cursor-pointer"
+      className="cursor-pointer text-sm decoration-default-contrastSecondary/50"
     >
       {children}
     </a>
@@ -16,13 +16,13 @@ function ContactLink(props) {
 
 function Footer() {
   return (
-    <div className="w-full p-5 md:px-12 border-t-default-contrastSecondary/30 border-t">
+    <div className="w-full border-t border-t-default-contrastSecondary/30 p-5 md:px-12">
       <nav className="flex gap-2">
         <Link
-          className="text-sm decoration-default-contrastSecondary/50 cursor-pointer"
+          className="cursor-pointer text-sm decoration-default-contrastSecondary/50"
           href={"/"}
         >
-          <span className="text-sm decoration-default-contrastSecondary/50 cursor-pointer">
+          <span className="cursor-pointer text-sm decoration-default-contrastSecondary/50">
             cheweilee.co
           </span>
         </Link>

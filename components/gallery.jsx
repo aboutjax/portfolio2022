@@ -7,10 +7,10 @@ export function ImageWithCaption(props) {
 
   return (
     <motion.div className={`gallery--span-${span}`}>
-      <div className="w-full aspect-[4/3] relative bg-default-contrastSecondary/10 rounded">
+      <div className="relative aspect-[4/3] w-full rounded bg-default-contrastSecondary/10">
         <Image objectFit="cover" layout="fill" alt={caption} src={src} />
       </div>
-      <figcaption className="text-default-contrastSecondary leading-tight">
+      <figcaption className="leading-tight text-default-contrastSecondary">
         {caption}
       </figcaption>
     </motion.div>
@@ -22,10 +22,10 @@ export function ImageWithCaptionComposable(props) {
 
   return (
     <motion.div className={`gallery--span-${span}`}>
-      <div className="w-full aspect-[4/3] relative">
+      <div className="relative aspect-[4/3] w-full">
         <Image objectFit="cover" layout="fill" alt={caption} src={src} />
       </div>
-      <figcaption className="text-default-contrastSecondary leading-tight">
+      <figcaption className="leading-tight text-default-contrastSecondary">
         {children}
       </figcaption>
     </motion.div>
@@ -45,7 +45,7 @@ export function VideoWithCaption({ src, autoplay, controls, span, caption }) {
         muted={true}
         className="w-full"
       />
-      <figcaption className="text-default-contrastSecondary leading-tight">
+      <figcaption className="leading-tight text-default-contrastSecondary">
         {caption}
       </figcaption>
     </motion.div>
@@ -65,7 +65,7 @@ export function VideoWithCaptionComposable({ src, span, children }) {
         muted={true}
         className="w-full"
       />
-      <figcaption className="text-default-contrastSecondary leading-tight">
+      <figcaption className="leading-tight text-default-contrastSecondary">
         {children}
       </figcaption>
     </motion.div>
@@ -85,7 +85,7 @@ export function EmbedWithCaption({ src, span, caption }) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-      <figcaption className="text-default-contrastSecondary leading-tight">
+      <figcaption className="leading-tight text-default-contrastSecondary">
         {caption}
       </figcaption>
     </motion.div>

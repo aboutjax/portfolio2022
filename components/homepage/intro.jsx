@@ -46,7 +46,7 @@ function Intro() {
             className={
               language === "taiwanese"
                 ? "inline-block bg-gradient-to-tr text-transparent from-default-contrastPrimary to-default-contrastSecondary bg-clip-text"
-                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors inline-block bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
+                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
             }
             onClick={() => {
               handleClick("taiwanese");
@@ -58,7 +58,7 @@ function Intro() {
             className={
               language === "mandarin"
                 ? "inline-block bg-gradient-to-tr text-transparent from-default-contrastPrimary to-default-contrastSecondary bg-clip-text"
-                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors inline-block bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
+                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
             }
             onClick={() => {
               handleClick("mandarin");

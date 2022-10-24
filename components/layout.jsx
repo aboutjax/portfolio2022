@@ -61,7 +61,7 @@ export default function Layout({ children, navLocation }) {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className={`theme-${themes[count]} bg-default text-default-contrastPrimary min-h-screen transition-colors`}
+      className={`theme-${themes[count]} min-h-screen bg-default text-default-contrastPrimary transition-colors`}
     >
       <Head>
         <meta name="theme-color" content={themesMetaColor[count]} />
@@ -76,9 +76,9 @@ export default function Layout({ children, navLocation }) {
 
 const Blob = () => {
   return (
-    <motion.div className="fixed z-10 top-0 bottom-0 left-0 right-0 flex items-center justify-center">
-      <div className="absolute top-0 right-0 w-full h-full z-10 backdrop-blur-3xl" />
-      <motion.div className="h-[80vh] w-[80vh] rounded-full bg-default-contrastSecondary/10 z-0" />
+    <motion.div className="fixed top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center">
+      <div className="absolute top-0 right-0 z-10 h-full w-full backdrop-blur-3xl" />
+      <motion.div className="z-0 h-[80vh] w-[80vh] rounded-full bg-default-contrastSecondary/10" />
     </motion.div>
   );
 };

@@ -19,14 +19,14 @@ export function CardContained(props) {
         }}
         className={`aspect-[16/9] md:aspect-[4/2] ${
           context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
-        }  group cursor-pointer flex flex-col justify-end bg-default-contrastSecondary/10  transition-all rounded-lg p-3 lg:p-5 `}
+        }  group flex cursor-pointer flex-col justify-end rounded-lg  bg-default-contrastSecondary/10 p-3 transition-all lg:p-5 `}
       >
-        <h2 className="uppercase text-sm text-default-contrastSecondary">
-          <strong className="font-xl text-default-contrastPrimary mr-1">
+        <h2 className="text-sm uppercase text-default-contrastSecondary">
+          <strong className="mr-1 font-xl text-default-contrastPrimary">
             {props.title}
           </strong>
         </h2>
-        <span className="text-xs md:text-sm text-default-contrastPrimary">
+        <span className="text-xs text-default-contrastPrimary md:text-sm">
           {" "}
           {props.projectYear}
         </span>
@@ -40,7 +40,7 @@ function CardGallery(props) {
   let list = images.map((image, index) => (
     <div
       key={index}
-      className="aspect-[4/3] relative w-full h-full snap-center"
+      className="relative aspect-[4/3] h-full w-full snap-center"
     >
       <Image
         objectFit="cover"
@@ -52,7 +52,7 @@ function CardGallery(props) {
     </div>
   ));
   return (
-    <motion.div className="flex snap-x snap-mandatory aspect-[4/3] overflow-y-hidden overflow-x-auto">
+    <motion.div className="flex aspect-[4/3] snap-x snap-mandatory overflow-x-auto overflow-y-hidden">
       {list}
     </motion.div>
   );
@@ -67,7 +67,7 @@ function Card(props) {
         whileHover={{ opacity: 0.8 }}
         className={`aspect-[4/3] md:aspect-[4/3] ${
           context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
-        }  group cursor-pointer  flex flex-col align-start mb-4`}
+        }  align-start group  mb-4 flex cursor-pointer flex-col`}
       >
         <div
           style={{
@@ -77,15 +77,15 @@ function Card(props) {
             backgroundSize: "cover",
             backgroundPosition: "center center",
           }}
-          className="rounded-lg  h-full w-full bg-default-contrastPrimary/10 mb-2 transition-all"
+          className="mb-2  h-full w-full rounded-lg bg-default-contrastPrimary/10 transition-all"
         />
 
-        <h2 className="uppercase text-sm text-default-contrastSecondary">
-          <strong className="font-semibold text-default-contrastPrimary mr-1">
+        <h2 className="text-sm uppercase text-default-contrastSecondary">
+          <strong className="mr-1 font-semibold text-default-contrastPrimary">
             {props.title}, {props.projectYear}
           </strong>
         </h2>
-        <span className="text-xs md:text-sm text-default-contrastSecondary">
+        <span className="text-xs text-default-contrastSecondary md:text-sm">
           {" "}
           {props.description}
         </span>
@@ -103,17 +103,17 @@ export function CardCarousel(props) {
         whileHover={{ opacity: 0.8 }}
         className={`aspect-[4/3] md:aspect-[4/3] ${
           context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
-        }  group cursor-pointer  flex flex-col align-start mb-4 `}
+        }  align-start group  mb-4 flex cursor-pointer flex-col `}
       >
-        <div className="border border-default-contrastSecondary/20 rounded-lg z-0 overflow-hidden h-full w-full bg-default-contrastPrimary/10 mb-2 transition-all">
+        <div className="z-0 mb-2 h-full w-full overflow-hidden rounded-lg border border-default-contrastSecondary/20 bg-default-contrastPrimary/10 transition-all">
           <CardGallery images={coverImages} priority={priority} />
         </div>
-        <h2 className="uppercase text-sm text-default-contrastSecondary mt-1">
-          <strong className="font-semibold text-default-contrastPrimary mr-1">
+        <h2 className="mt-1 text-sm uppercase text-default-contrastSecondary">
+          <strong className="mr-1 font-semibold text-default-contrastPrimary">
             {props.title}, {props.projectYear}
           </strong>
         </h2>
-        <span className="text-xs md:text-sm text-default-contrastSecondary">
+        <span className="text-xs text-default-contrastSecondary md:text-sm">
           {props.description}
         </span>
       </motion.div>

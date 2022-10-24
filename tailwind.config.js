@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require("tailwindcss/colors");
-
 module.exports = {
   future: {
     hoverOnlyWhenSupported: true,

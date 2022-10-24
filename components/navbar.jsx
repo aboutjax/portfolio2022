@@ -9,7 +9,7 @@ function NavLink({ url, label, location, id }) {
       <span
         className={`${
           location === id ? "text-default-contrastPrimary" : ""
-        } cursor-pointer p-3 md:py-6 hover:text-default-contrastPrimary transition-colors shrink-0`}
+        } shrink-0 cursor-pointer p-3 transition-colors hover:text-default-contrastPrimary md:py-6`}
       >
         {label}
       </span>
@@ -37,13 +37,13 @@ const ThemeToggle = ({ setTheme }) => {
     <motion.button
       onClick={setTheme}
       variants={themeToggleVariants}
-      className="rounded-full px-5 md:px-9 cursor-pointer"
+      className="cursor-pointer rounded-full px-5 md:px-9"
       whileHover={"hover"}
       whileTap={"pressed"}
     >
       <motion.div
         variants={themeToggleDotVariants}
-        className="h-3 curosr-pointer w-3 bg-default-contrastPrimary rounded-full border border-default-contrastPrimary flex items-center justify-center bg-gradient-to-bl from-default-contrastSecondary to-default-contrastSecondary/10"
+        className="flex h-3 w-3 cursor-pointer items-center justify-center rounded-full border border-default-contrastPrimary bg-default-contrastPrimary bg-gradient-to-bl from-default-contrastSecondary to-default-contrastSecondary/10"
       />
     </motion.button>
   );
@@ -68,9 +68,9 @@ export default function Navbar({ navLocation, setTheme }) {
   }, [router]);
 
   return (
-    <div className="z-50 relative transition-colors top-0 sm:sticky w-full flex justify-between border-b border-b-default-contrastSecondary/10 bg-default/80 backdrop-blur-md">
+    <div className="relative top-0 z-50 flex w-full justify-between border-b border-b-default-contrastSecondary/10 bg-default/80 backdrop-blur-md transition-colors sm:sticky">
       <nav
-        className={`flex flex-nowrap w-full px-2 md:px-9 text-base font-regular text-default-contrastSecondary `}
+        className={`font-regular flex w-full flex-nowrap px-2 text-base text-default-contrastSecondary md:px-9 `}
       >
         <NavLink
           location={location}
@@ -79,7 +79,7 @@ export default function Navbar({ navLocation, setTheme }) {
           id="intro"
         />
         <NavLink location={location} url="/#work" label="Work" id="work" />
-        <div className="hidden sm:block py-3 md:py-6">
+        <div className="hidden py-3 sm:block md:py-6">
           <NavLink
             location={location}
             url="/#wip"

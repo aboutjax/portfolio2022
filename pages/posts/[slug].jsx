@@ -28,10 +28,10 @@ const components = {
 
 export default function Post({ frontMatter, mdxSource }) {
   let creditsList = frontMatter.credits?.map((item, index) => (
-    <li className="text-sm mb-1" key={index}>
+    <li className="mb-1 text-sm" key={index}>
       {item.url ? (
         <a
-          className="underline underline-offset-2 decoration-default-contrastSecondary/50 has-url"
+          className="has-url underline decoration-default-contrastSecondary/50 underline-offset-2"
           href={item.url}
         >
           {item.name}
@@ -57,15 +57,15 @@ export default function Post({ frontMatter, mdxSource }) {
         />
         <meta property="og:image" content={frontMatter.ogImage.url} />
       </Head>
-      <header className="py-[15vh] border-b-default-contrastSecondary/30 border-b p-5 md:px-12">
-        <p className="text-sm md:text-base text-default-contrastSecondary">
+      <header className="border-b border-b-default-contrastSecondary/30 p-5 py-[15vh] md:px-12">
+        <p className="text-sm text-default-contrastSecondary md:text-base">
           {frontMatter.jobTitle && `${frontMatter.jobTitle}, `}
           {frontMatter.projectYear}
         </p>
-        <h1 className="leading-heading mb-1 text-xl md:text-2xl font-xl tracking-tight">
+        <h1 className="mb-1 text-xl font-xl leading-heading tracking-tight md:text-2xl">
           {frontMatter.title}
         </h1>
-        <p className="text-default-contrastPrimary text-base md:text-lg max-w-2xl">
+        <p className="max-w-2xl text-base text-default-contrastPrimary md:text-lg">
           {frontMatter.excerpt}
         </p>
       </header>
@@ -75,7 +75,7 @@ export default function Post({ frontMatter, mdxSource }) {
         {frontMatter.credits && (
           <>
             <hr className="border-default-contrastSecondary/30" />
-            <h1 className="mt-5 mb-1 text-default-contrastSecondary text-xs uppercase">
+            <h1 className="mt-5 mb-1 text-xs uppercase text-default-contrastSecondary">
               Credits
             </h1>
             <ul>{creditsList}</ul>

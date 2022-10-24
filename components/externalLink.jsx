@@ -6,7 +6,7 @@ function ExternalLink(props) {
     <a
       href={href}
       target="blank"
-      className="underline underline-offset-2 decoration-default-contrastSecondary"
+      className="underline decoration-default-contrastSecondary underline-offset-2"
     >
       {children}
     </a>
