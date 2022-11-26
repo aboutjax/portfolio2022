@@ -68,7 +68,7 @@ export default function Navbar({ navLocation, setTheme }) {
   }, [router]);
 
   return (
-    <div className="relative top-0 z-50 flex w-full justify-between border-b border-b-default-contrastSecondary/10 bg-default/80 backdrop-blur-md transition-colors sm:sticky">
+    <div className="relative top-0 z-50 flex w-full justify-between border-b border-b-default-contrastSecondary/10 bg-default backdrop-blur-md transition-colors sm:sticky">
       <nav
         className={`font-regular flex w-full flex-nowrap px-2 text-base text-default-contrastSecondary md:px-9 `}
       >

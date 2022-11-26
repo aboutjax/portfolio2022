@@ -11,7 +11,8 @@
 }
 
 * {
-  font-feature-settings: "salt";
+  font-feature-settings: "cv11";
+  line-height: 1.4;
 }
 
 @layer base {
@@ -23,7 +24,7 @@
 }
 
 .theme-light {
-  --token-default-main: 255 255 255;
+  --token-default-main: 241 241 241;
   --token-default-contrast-primary: 0 0 0;
   --token-default-contrast-secondary: 140 140 140;
 }
@@ -101,7 +102,7 @@ body {
 }
 
 .prose-custom {
-  @apply max-w-[100vw] 2xl:max-w-[70vw] prose prose-headings:text-default-contrastPrimary prose-headings:font-semibold text-default-contrastPrimary prose-strong:text-default-contrastPrimary prose-blockquote:border-default-contrastPrimary/20 prose-blockquote:text-default-contrastPrimary/60 prose-hr:border-default-contrastPrimary/20 prose-figcaption:text-sm prose-figcaption:mt-2 prose-figcaption:text-default-contrastPrimary prose-a:text-default-contrastPrimary prose-li:marker:text-default-contrastPrimary/30 prose-pre:bg-default-contrastPrimary/20 prose-code:text-default-contrastPrimary prose-img:rounded prose-headings:tracking-tight prose-video:m-0 prose-p:underline-offset-2;
+  @apply prose max-w-[100vw] text-default-contrastPrimary prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-default-contrastPrimary prose-p:underline-offset-2 prose-a:text-default-contrastPrimary prose-blockquote:border-default-contrastPrimary/20 prose-blockquote:text-default-contrastPrimary/60 prose-figcaption:mt-2 prose-figcaption:text-sm prose-figcaption:text-default-contrastPrimary prose-strong:text-default-contrastPrimary prose-code:text-default-contrastPrimary prose-pre:bg-default-contrastPrimary/20 prose-li:marker:text-default-contrastPrimary/30 prose-img:rounded prose-video:m-0 prose-hr:border-default-contrastPrimary/20 2xl:max-w-[70vw];
 }
 
 .prose :where(:not(.gallery)) {
