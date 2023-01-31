@@ -18,7 +18,7 @@ export default function Layout({ children, navLocation }) {
     "night-lime",
   ];
   let themesMetaColor = [
-    "rgb(255, 255, 255)",
+    "rgb(241, 241, 241)",
     "rgb(255, 251, 235)",
     "rgb(247, 254, 231)",
     "rgb(254 252 232)",
