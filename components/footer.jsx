@@ -23,7 +23,7 @@ function Footer() {
           href={"/"}
         >
           <span className="cursor-pointer text-sm decoration-default-contrastSecondary/50">
-            cheweilee.co
+            cheweilee.com
           </span>
         </Link>
 
