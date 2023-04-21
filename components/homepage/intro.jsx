@@ -24,17 +24,17 @@ function Intro() {
     <div>
       <Section
         id="intro"
-        className="md:px-12 pt-[15vh] py-[10vh] md:py-[20vh] md:pt-[28vh]"
+        className="py-[10vh] pt-[15vh] md:px-12 md:py-[20vh] md:pt-[28vh]"
       >
         <motion.h1
           style={{ y, opacity }}
-          className="relative text-lg md:text-xl text-default-contrastSecondary leading-heading font-xl tracking-tight max-w-6xl"
+          className="relative max-w-6xl text-lg font-black leading-heading tracking-tight text-default-contrastPrimary md:text-xl"
         >
           <motion.span
             className={
               language === "english"
-                ? "inline-block bg-gradient-to-tr text-transparent from-default-contrastPrimary to-default-contrastSecondary bg-clip-text"
-                : "relative cursor-pointer hover:inline-block transition-colors inline-block bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
+                ? "inline-block bg-gradient-to-tr from-default-contrastPrimary to-default-contrastSecondary bg-clip-text text-transparent"
+                : "relative inline-block cursor-pointer bg-gradient-to-tr from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text text-transparent transition-colors hover:inline-block"
             }
             onClick={() => {
               handleClick("english");
@@ -45,8 +45,8 @@ function Intro() {
           <motion.span
             className={
               language === "taiwanese"
-                ? "inline-block bg-gradient-to-tr text-transparent from-default-contrastPrimary to-default-contrastSecondary bg-clip-text"
-                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
+                ? "inline-block bg-gradient-to-tr from-default-contrastPrimary to-default-contrastSecondary bg-clip-text text-transparent"
+                : "relative inline-block cursor-pointer bg-gradient-to-tr from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text text-transparent transition-colors hover:text-default-contrastPrimary"
             }
             onClick={() => {
               handleClick("taiwanese");
@@ -57,8 +57,8 @@ function Intro() {
           <motion.span
             className={
               language === "mandarin"
-                ? "inline-block bg-gradient-to-tr text-transparent from-default-contrastPrimary to-default-contrastSecondary bg-clip-text"
-                : "relative cursor-pointer hover:text-default-contrastPrimary inline-block transition-colors bg-gradient-to-tr text-transparent from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text"
+                ? "inline-block bg-gradient-to-tr from-default-contrastPrimary to-default-contrastSecondary bg-clip-text text-transparent"
+                : "relative inline-block cursor-pointer bg-gradient-to-tr from-default-contrastSecondary to-default-contrastPrimary/50 bg-clip-text text-transparent transition-colors hover:text-default-contrastPrimary"
             }
             onClick={() => {
               handleClick("mandarin");
@@ -67,7 +67,7 @@ function Intro() {
             你好.
           </motion.span>
           {language === "english" && (
-            <span>
+            <span className="leading-none tracking-tighter">
               {" "}
               I&apos;m Che Wei Lee, a Product Designer and Developer made in
               Kaohsiung, Taiwan, raised in Auckland, New Zealand, now based in
