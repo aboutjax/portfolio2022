@@ -2,6 +2,8 @@ import React from "react";
 import Section from "@/components/homepage/section";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+// Test
+
 function Intro() {
   const [language, setLanguage] = React.useState("english");
   let { scrollYProgress, scrollY } = useScroll();
