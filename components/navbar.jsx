@@ -7,9 +7,8 @@ function NavLink({ url, label, location, id }) {
   return (
     <Link scroll={false} href={url}>
       <span
-        className={`${
-          location === id ? "text-default-contrastPrimary" : ""
-        } shrink-0 cursor-pointer p-3 transition-colors hover:text-default-contrastPrimary md:py-6`}
+        className={`${location === id ? "text-default-contrastPrimary font-medium" : ""
+          } shrink-0 cursor-pointer p-3 transition-colors hover:text-default-contrastPrimary md:py-4`}
       >
         {label}
       </span>
@@ -79,14 +78,6 @@ export default function Navbar({ navLocation, setTheme }) {
           id="intro"
         />
         <NavLink location={location} url="/#work" label="Work" id="work" />
-        <div className="hidden py-3 sm:block md:py-6">
-          <NavLink
-            location={location}
-            url="/#wip"
-            label="In Progress"
-            id="wip"
-          />
-        </div>
         <NavLink location={location} url="/#about" label="About" id="about" />
       </nav>
       <ThemeToggle setTheme={setTheme} />

@@ -17,9 +17,8 @@ export function CardContained(props) {
           backgroundSize: "110%",
           backgroundPosition: "center center",
         }}
-        className={`aspect-[16/9] md:aspect-[4/2] ${
-          context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
-        }  group flex cursor-pointer flex-col justify-end rounded-lg  bg-default-contrastSecondary/10 p-3 transition-all lg:p-5 `}
+        className={`aspect-[16/9] md:aspect-[4/2] ${context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
+          }  group flex cursor-pointer flex-col justify-end rounded-lg  bg-default-contrastSecondary/10 p-3 transition-all lg:p-5 `}
       >
         <h2 className="text-sm uppercase text-default-contrastSecondary">
           <strong className="mr-1 font-xl text-default-contrastPrimary">
@@ -40,7 +39,7 @@ function CardGallery(props) {
   let list = images.map((image, index) => (
     <div
       key={index}
-      className="relative aspect-[4/3] h-full w-full snap-center"
+      className="relative flex-grow-0 flex-shrink-0 aspect-[4/3] h-full w-full snap-center"
     >
       <Image
         objectFit="cover"
@@ -52,7 +51,7 @@ function CardGallery(props) {
     </div>
   ));
   return (
-    <motion.div className="flex aspect-[4/3] snap-x snap-mandatory overflow-x-auto overflow-y-hidden">
+    <motion.div className="flex flex-nowrap aspect-[4/3] snap-x snap-mandatory overflow-x-auto overflow-y-hidden">
       {list}
     </motion.div>
   );
@@ -65,15 +64,13 @@ function Card(props) {
     <Link href={`posts/${post.slug}`} scroll={true}>
       <motion.div
         whileHover={{ opacity: 0.8 }}
-        className={`aspect-[4/3] md:aspect-[4/3] ${
-          context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
-        }  align-start group  mb-4 flex cursor-pointer flex-col`}
+        className={`aspect-[4/3] md:aspect-[4/3] ${context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
+          }  align-start group  mb-4 flex cursor-pointer flex-col`}
       >
         <div
           style={{
-            backgroundImage: `url(${
-              ogImage ? ogImage.url : placeholderImageUrl
-            })`,
+            backgroundImage: `url(${ogImage ? ogImage.url : placeholderImageUrl
+              })`,
             backgroundSize: "cover",
             backgroundPosition: "center center",
           }}
@@ -101,9 +98,8 @@ export function CardCarousel(props) {
     <Link href={`posts/${post.slug}`} scroll={true}>
       <motion.div
         whileHover={{ opacity: 0.8 }}
-        className={`aspect-[4/3] md:aspect-[4/3] ${
-          context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
-        }  align-start group  mb-4 flex cursor-pointer flex-col `}
+        className={`aspect-[4/3] md:aspect-[4/3] ${context === "work" ? "md:first:col-span-2 lg:first:col-span-2" : ""
+          }  align-start group  mb-4 flex cursor-pointer flex-col `}
       >
         <div className="z-0 mb-2 h-full w-full overflow-hidden rounded-lg border border-default-contrastSecondary/20 bg-default-contrastPrimary/10 transition-all">
           <CardGallery images={coverImages} priority={priority} />

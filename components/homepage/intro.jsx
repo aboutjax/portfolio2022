@@ -30,7 +30,7 @@ function Intro() {
       >
         <motion.h1
           style={{ y, opacity }}
-          className="relative max-w-6xl text-lg font-black leading-heading tracking-tight text-default-contrastPrimary md:text-xl"
+          className="relative max-w-[24ch] text-lg font-medium leading-heading text-default-contrastPrimary md:text-xl"
         >
           <motion.span
             className={
