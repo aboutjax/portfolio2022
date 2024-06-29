@@ -69,7 +69,7 @@ function Intro() {
             你好.
           </motion.span>
           {language === "english" && (
-            <span className="leading-none tracking-tighter">
+            <span className="leading-none tracking-tight">
               {" "}
               I&apos;m Che Wei Lee, a Product Designer and Developer made in
               Kaohsiung, Taiwan, raised in Auckland, New Zealand, now based in
